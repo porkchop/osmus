@@ -8,7 +8,7 @@ A tech demo inspired by Osmos.  For more information read the article here: http
 * `cd osmus`
 * `npm link`
 * Run `node server/server.js`
-* open browser at http://localhost:8088
+* Open browser at http://localhost:8088
 * Profit
 
 # Compatibility
