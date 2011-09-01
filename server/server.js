@@ -1,6 +1,28 @@
-var io = require('socket.io').listen(5050);
+var express = require('express');
+var app = express.createServer();
+var io = require('socket.io').listen(app);
 var gamejs = new require('../common/game.js');
 var level = new require('./level.js');
+
+app.listen(8088, function () {
+	  var addr = app.address();
+	  console.log('   app listening on http://' + addr.address + ':' + addr.port);
+});
+
+// clumsy routing
+app.get('/', function(req, res){
+    res.sendfile('client/index.html');
+});
+
+app.get('/*.*', function(req, res){
+	var request = req.params[0] + '.' + req.params[1];
+	var prefix = 'client/';
+	if(request === 'common/game.js')
+		prefix = '';
+	var file = prefix + request;
+	console.log('   sending file ' + file);
+    res.sendfile(file);
+});
 
 var Game = gamejs.Game;
 var game = new Game();
