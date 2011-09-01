@@ -4,10 +4,11 @@ A tech demo inspired by Osmos.  For more information read the article here: http
 
 # Running
 
-* Install Node
-* Run `npm install socket.io`
+* Install Node and npm
+* cd osmus
+* npm link
 * Run `node server/server.js`
-* Open client/index.html - for example on Mac `open client/index.html`
+* open browser at http://localhost:8088
 * Profit
 
 # Compatibility
