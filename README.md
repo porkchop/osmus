@@ -5,8 +5,8 @@ A tech demo inspired by Osmos.  For more information read the article here: http
 # Running
 
 * Install Node and npm
-* cd osmus
-* npm link
+* `cd osmus`
+* `npm link`
 * Run `node server/server.js`
 * open browser at http://localhost:8088
 * Profit
